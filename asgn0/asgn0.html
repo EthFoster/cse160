@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Assignment 0: Vector Library</title>
+</head>
+    <body onload="main()">
+        <canvas id="canvas" width="400" height="400"> <!--initializing canvas-->
+            Please use a browser that supports "canvas"
+            <script>
+                var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "black";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            </script>
+        </canvas>
+        <script src="lib/cuon-matrix-cse160.js"></script> <!--adding dependences-->
+        <script script src="asgn0.js"></script>
+        <br> <!--vector 1 input-->
+            V1:
+            <input id="x1" type="text" value="">
+            <input id="y1" type="text" value="">
+        <br> <!--vector 2 input-->
+            V2:
+            <input id="x2" type="text" value="">
+            <input id="y2" type="text" value="">
+        <br> <!--draw button creation-->
+            <input type="button" value="draw" onclick=handleDrawEvent()>
+        <br>
+        <br>
+            Operation:
+            <select id="selector"> <!--drop down menu-->
+                <option value="add">add</option>
+                <option value="sub">Subtract</option>
+                <option value="mul">Multiply</option>
+                <option value="div">Divide</option>
+                <option value="area">Area</option>
+                <option value="mag">Magnitude</option>
+                <option value="norm">Normalize</option>
+            </select>
+            Scalar: <!--Scalar input section-->
+            <input id="scalar" type="text" value="">
+        <br> <!--draw button creation-->
+            <input type="button" value="draw" onclick=handleDrawOperationEvent()>
+    </body>
+</html>
